@@ -34,6 +34,28 @@
       "responses": ["O genio Lionel Messi", "O E.T - Lionel Messi","Lionel Messi","O Melhor de todos os tempos...Lionel Messi"]
     },
     {
+      "tag": "InformacoesMessi",
+      "patterns": ["Me diga algo sobre o Lionel Messi",
+        "Me fala uma curisosidade sobre o Lionel Messi",
+        "Me fala uma informação sobre o Lionel Messi",
+        "Messi",
+        "Lionel Messi"
+      ],
+      "responses": ["O genio Lionel Messi", "Possui 786 gols na carreira!","","Ele chegou a incriveis 91 tentos no ano calendario de 2012"
+        ,"Ele chegou a incriveis 91 tentos no ano calendario de 2012", "Tem 1.70m de altura", ]
+    },
+    {
+      "tag": "InformacoesCristiano Ronaldo",
+      "patterns": ["Me diga algo sobre o Cristiano Ronaldo",
+        "Me fala uma curisosidade sobre o Cristiano Ronaldo",
+        "Me fala uma informação sobre o Cristiano Ronaldo",
+        "Cristiano",
+        "Cristiano Ronaldo"
+      ],
+      "responses": ["A Maquina - Cristiano Ronaldo", "Jogador com mais gols oficiais da historia","Quando tinha 15 anos de idade, Cristiano Ronaldo quase parou de jogador futebol por causa de problemas no coracao,"
+        ,"Ele é um robo ;-;"]
+    },
+    {
       "tag": "Cristiano Ronaldo",
       "patterns": [
         "Qual jogador com maior número de gols na carreira?",
@@ -51,6 +73,18 @@
         "Qual o melhor jogador da história da seleção portuguesa?"
       ],
       "responses": ["A Maquina - Cristiano Ronaldo", "O Robo - Cristiano Ronaldo","Cristiano Ronaldo","Papai Cris"]
+    },
+    {
+      "tag": "Neymar",
+      "patterns": ["Quem é seu jogador favorito?",
+        "Melhor jogador em atividade no Brasil?",
+        "Amigo de messi",
+        "Neymar Jr.",
+        "Neymar",
+        "O que acha do Neymar Jr.?",
+        "Gosta do Neymar?",
+      ],
+      "responses": ["Neymar...ele ", "O E.T - Lionel Messi","Lionel Messi","O Melhor de todos os tempos...Lionel Messi"]
     }
   ]
 }
