@@ -17,23 +17,12 @@ from discord.ext.commands import Bot
 from chatterbot import ChatBot
 
 
-chatbot = ChatBot(
-        'Ajudante do Squad',
-        read_only=False,
-        storage_adapter='chatterbot.storage.SQLStorageAdapter',
-        logic_adapters=[
-            {
-                'import_path': 'chatterbot.logic.BestMatch',
-                'maximum_similarity_threshold': 0.90
-            }
-        ]
-    )
+chatbot = ChatBot('Ajudante do Squad', read_only=True)
 
 with open("intents.json") as file:
     data = json.load(file)
 
 try:
-    x
     with open("data.pickle", "rb") as f:
         palavras, labels, treinando, saida = pickle.load(f)
 except:
@@ -97,9 +86,11 @@ net = tflearn.regression(net)
 model = tflearn.DNN(net)
 
 
-
-model.fit(treinando, saida, n_epoch=1000, batch_size=8, show_metric=True)
-model.save("model.tflearn")
+try:
+    model.load("model.tflearn")
+except:
+    model.fit(treinando, saida, n_epoch=1000, batch_size=8, show_metric=True)
+    model.save("model.tflearn")
 
 
 def saco_de_palavras(s, palavras):
