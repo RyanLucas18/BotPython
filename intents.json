@@ -1,0 +1,70 @@
+{
+  "intents": [
+    {"tag": "saudacoes",
+      "patterns": ["Oi", "Olá", "Oi bot", "Ola bot", "Eai"],
+      "responses": ["Ola, tudo bem?","Eai, tudo bem?"]
+    },
+    {
+      "tag": "bem",
+      "patterns": ["Tudo bem?", "Tranquilo?","Estou bem e voce?","Tudo certo e com voce?"],
+      "responses": ["Estou bem, precisa de alguma coisa?", "Tranquilo, precisa de alguma coisa?","Esta tudo bem, precisa de alguma coisa?"]
+    },
+    {
+      "tag": "idade",
+      "patterns": ["Quantos anos você tem?", "Quando é seu aniversário?","Qual a sua idade?","Quando você nasceu?"],
+      "responses": ["Bem...eu nao sei ;-;", "Entao...","Faz pergunta complicada nao ;-;"]
+    },
+    {
+      "tag": "Messi",
+      "patterns": ["Quem é melhor, cristiano ronaldo ou lionel messi?",
+        "Qual você prefere, cristiano ronaldo ou lionel messi?",
+        "Qual melhor jogador da história do Barcelona?",
+        "Qual o melhor jogador da argentina atualmente?",
+        "Qual o melhor jogador da argentina da história?",
+        "Qual o jogador que possui maior numero de partidas na história da Laliga?",
+        "Qual jogador possui mais assistências na história da Laliga?",
+        "Qual jogador tem mais gols na história da Laliga?",
+        "Quem tem mais assistencias, cristiano ronaldo ou lionel messi?"
+      ],
+      "responses": ["O genio Lionel Messi", "O E.T - Lionel Messi","Lionel Messi","O Melhor de todos os tempos...Lionel Messi"]
+    },
+    {
+      "tag": "Cristiano Ronaldo",
+      "patterns": [
+        "Qual jogador com maior número de gols na carreira?",
+        "Qual jogador tem mais gols na carreira?",
+        "Quem tem mais gols, crisitano ronaldo ou lionel messi?",
+        "Quem tem mais gols na Champions League?",
+        "Quem é o maior artilheiro da Champions League?",
+        "Quem é maior artilheiro da história do real madrid?",
+        "Quem é o maior artilheiro da historia da Liga dos Campeões?",
+        "Qual jogador tem mais partidas na Liga dos Campeões?",
+        "Qual jogador possui mais jogos na Liga dos Campeões?",
+        "Qual o jogador com mais gols pela seleção?",
+        "Qual o jogador com mais gols na seleção portuguesa?",
+        "Qual o maior jogador da história de portugal?",
+        "Qual o melhor jogador da história da seleção portuguesa?"
+      ],
+      "responses": ["A Maquina - Cristiano Ronaldo", "O Robo - Cristiano Ronaldo","Cristiano Ronaldo","Papai Cris"]
+    },
+    {
+      "tag": "CopaMundo",
+      "patterns": [
+        "Qual jogador com maior número de gols na carreira?",
+        "Qual jogador tem mais gols na carreira?",
+        "Quem tem mais gols, crisitano ronaldo ou lionel messi?",
+        "Quem tem mais gols na Champions League?",
+        "Quem é o maior artilheiro da Champions League?",
+        "Quem é maior artilheiro da história do real madrid?",
+        "Quem é o maior artilheiro da historia da Liga dos Campeões?",
+        "Qual jogador tem mais partidas na Liga dos Campeões?",
+        "Qual jogador possui mais jogos na Liga dos Campeões?",
+        "Qual o jogador com mais gols pela seleção?",
+        "Qual o jogador com mais gols na seleção portuguesa?",
+        "Qual o maior jogador da história de portugal?",
+        "Qual o melhor jogador da história da seleção portuguesa?"
+      ],
+      "responses": ["A Maquina - Cristiano Ronaldo", "O Robo - Cristiano Ronaldo","Cristiano Ronaldo","Papai Cris"]
+    }
+  ]
+}
