@@ -1,90 +1,732 @@
 {
   "intents": [
     {"tag": "saudacoes",
-      "patterns": ["Oi", "Olá", "Oi bot", "Ola bot", "Eai"],
+      "patterns": ["Oi", "Ola", "Oi bot", "Ola bot", "Eai", "Salve"],
       "responses": ["Ola, tudo bem?","Eai, tudo bem?"]
     },
     {
       "tag": "bem",
-      "patterns": ["Tudo bem?", "Tranquilo?","Estou bem e voce?","Tudo certo e com voce?"],
+      "patterns": ["Tudo bem?", "Tranquilo?","Estou bem e voce?","Tudo certo e com voce?","Estou sim e com voce?", "Estou e voce?", "Tranquilo e voce?"],
       "responses": ["Estou bem, precisa de alguma coisa?", "Tranquilo, precisa de alguma coisa?","Esta tudo bem, precisa de alguma coisa?"]
     },
     {
+      "tag": "Estoubem",
+      "patterns": ["Estou bem", "Estou sim","Tambem estou","Tranquilo", "Eu tambem"],
+      "responses": ["Perfeito, precisa de alguma coisa?", "Otimo, fico feliz em saber, precisa de alguma coisa?","Excelente, necessita de alguma coisa?", "Que bom, precisa de alguma coisa?"]
+    },
+    {
       "tag": "idade",
-      "patterns": ["Quantos anos você tem?", "Quando é seu aniversário?","Qual a sua idade?","Quando você nasceu?"],
+      "patterns": ["Quantos anos você tem?", "Quando é seu aniversario?","Qual a sua idade?","Quando você nasceu?"],
       "responses": ["Bem...eu nao sei ;-;", "Entao...","Faz pergunta complicada nao ;-;"]
     },
     {
       "tag": "nome",
-      "patterns": ["Qual seu nome?", "Qual é o seu nome?"],
+      "patterns": ["Qual seu nome?", "Qual é o seu nome?", "Como voce chama ?", "Como voce chama ?"],
       "responses": ["Ajudante do Squad, posso te ajudar?","Meu nome é Ajudante do Squado, posso te ajudar?"]
     },
     {
-      "tag": "Messi",
-      "patterns": ["Quem é melhor, cristiano ronaldo ou lionel messi?",
-        "Qual você prefere, cristiano ronaldo ou lionel messi?",
-        "Qual melhor jogador da história do Barcelona?",
-        "Qual o melhor jogador da argentina atualmente?",
-        "Qual o melhor jogador da argentina da história?",
-        "Qual o jogador que possui maior numero de partidas na história da Laliga?",
-        "Qual jogador possui mais assistências na história da Laliga?",
-        "Qual jogador tem mais gols na história da Laliga?",
-        "Quem tem mais assistencias, cristiano ronaldo ou lionel messi?"
+      "tag": "boolean-sim",
+      "patterns": ["Gosta de fruta?",
+        "Gosta do Neymar Jr.?",
+        "Gosta do Lionel messi?",
+        "Gosta do Cristiano Ronaldo?",
+        "Gosta de futebol?",
+        "Gosta de jogar?",
+        "Gosta de praticar esporte?"
       ],
-      "responses": ["O genio Lionel Messi", "O E.T - Lionel Messi","Lionel Messi","O Melhor de todos os tempos...Lionel Messi"]
+      "responses": ["Sim, gosto muito e voce?", "Eu adoro e voce?","Sim senhor e vossa senhoria?","MUITO E VOCE?"]
     },
     {
-      "tag": "InformacoesMessi",
-      "patterns": ["Me diga algo sobre o Lionel Messi",
-        "Me fala uma curisosidade sobre o Lionel Messi",
-        "Me fala uma informação sobre o Lionel Messi",
-        "Messi",
-        "Lionel Messi"
+      "tag": "boolean-nao",
+      "patterns": ["Gosta de estudar?",
+        "Gosta de trabalhar?",
+        "Gosta de fazer academia?",
+        "Gosta de chorar?",
+        "Gosta de ficar triste?",
+        "Gosta de tomar bronca?"
       ],
-      "responses": ["O genio Lionel Messi", "Possui 786 gols na carreira!","","Ele chegou a incriveis 91 tentos no ano calendario de 2012"
-        ,"Ele chegou a incriveis 91 tentos no ano calendario de 2012", "Tem 1.70m de altura", ]
+      "responses": ["Nao e voce?", "Odeio e voce?","Não senhor e vossa senhoria?","ODEIO COM TODAS AS MINHAS FORÇAS! e voce?"]
     },
     {
-      "tag": "InformacoesCristiano Ronaldo",
-      "patterns": ["Me diga algo sobre o Cristiano Ronaldo",
-        "Me fala uma curisosidade sobre o Cristiano Ronaldo",
-        "Me fala uma informação sobre o Cristiano Ronaldo",
-        "Cristiano",
-        "Cristiano Ronaldo"
+      "tag": "Pergunta",
+      "patterns": ["Gostaria de fazer uma pergunta",
+        "Quero fazer uma pergunta",
+        "Poderia responder uma pergunta?",
+        "Pergunta",
+        "Quero fazer uma pergunta",
+        "Quero realizar uma pergunta",
+        "Posso fazer uma pergunta?",
+        "Posso perguntar alguma coisa?"
       ],
-      "responses": ["A Maquina - Cristiano Ronaldo", "Jogador com mais gols oficiais da historia","Quando tinha 15 anos de idade, Cristiano Ronaldo quase parou de jogador futebol por causa de problemas no coracao,"
-        ,"Ele é um robo ;-;"]
+      "responses": ["Pode fazer, o que quer perguntar?", "Claro que pode, o que deseja perguntar?","Pode perguntar!","Pode fazer a pergunta!"]
     },
     {
-      "tag": "Cristiano Ronaldo",
+      "tag": "Pergunta",
+      "patterns": ["Gostaria de fazer uma pergunta",
+        "Quero fazer uma pergunta",
+        "Poderia responder uma pergunta?",
+        "Pergunta",
+        "Quero fazer uma pergunta",
+        "Quero realizar uma pergunta"
+      ],
+      "responses": ["Pode fazer, o que quer perguntar?", "Claro que pode, o que deseja perguntar?","Pode perguntar!","Pode fazer a pergunta!"]
+    },
+    {
+      "tag": "Vencedores",
+      "patterns": ["Quais sao os maiores vencedores da champions league?",
+        "Quais sao os times que tem mais titulos da champions league?",
+        "Maiores vencedores da champions"
+      ],
+      "responses": ["\nReal Madrid: 14 titulos\nMilan: 7 titulos\nLiverpool: 7 titulos\nBayern: 6 titulos\nBarcelona: 5 titulos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "Participacoes",
+      "patterns": ["Quais times tem mais participacoes na champions league?",
+        "Quais times possui mais participacoes na champions league?",
+        "Possui mais participacoes na champions league",
+        "Times com mais participacoes na champions league"
+      ],
+      "responses": ["\nReal Madrid: 48 participacoes\nBenfica: 42 participacoes\nDynamo Kyiv: 39 participacoes\nAjax: 39 participacoes\nJuventos: 36 participacoes\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "Jogos",
+      "patterns": ["Quais times tem mais jogos na champions league?",
+        "Quais times possui mais jogos na champions league?",
+        "Possui mais jogos na champions league",
+        "Times com mais jogos na champions league",
+        "Quais times tem mais partidas na champions league?",
+        "Quais times possui mais partidas na champions league?",
+        "Possui mais partidas na champions league",
+        "Times com mais partidas na champions league"
+      ],
+      "responses": ["\nReal Madrid: 470 partidas\nBayern de Munique: 378 partidas\nBarcelona: 399 partidas\nJuventos: 301 partidas\nManchester United: 293 partidas\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "JogosV",
+      "patterns": ["Quais times mais venceram jogos na champions league?",
+        "Quais times mais venceram partidas na champions league?",
+        "Quais times possui mais vitorias na champions league?",
+        "Possui vitorias na champions league",
+        "Possui mais jogos vencidos na champions league",
+        "Possui mais partidas vencidas na champions league",
+        "Times com mais vitorias na champions league",
+        "Times que mais venceram jogos na champions",
+        "Times que mais venceram partidas na champions"
+      ],
+      "responses": ["\nReal Madrid: 281 vitorias\nBayern de Munique: 277 vitorias\nBarcelona: 197 vitorias\nManchester United: 160 vitorias\nJuventos: 153 vitorias\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "JogosD",
+      "patterns": ["Quais times mais perderam jogos na champions league?",
+        "Quais times mais perderam partidas na champions league?",
+        "Quais times possui mais derrotas na champions league?",
+        "Possui derrotas na champions league",
+        "Possui mais jogos perdidos na champions league",
+        "Possui mais partidas perdidas na champions league",
+        "Times com mais derrotas na champions league",
+        "Times que mais perderam jogos na champions",
+        "Times que mais perderam partidas na champions"
+      ],
+      "responses": ["\nReal Madrid: 109 derrotas\nDynamo Kyiv: 95 derrotas\nBenfica: 90 derrotas\nAnderlecht: 86 derrotas\nPorto: 86 derrotas\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "JogosE",
+      "patterns": ["Quais times mais empataram jogos na champions league?",
+        "Quais times mais empataram partidas na champions league?",
+        "Quais times possui mais empates na champions league?",
+        "Possui empates na champions league",
+        "Possui mais jogos empatados na champions league",
+        "Possui partidas empatadas na champions league",
+        "Times com mais empates na champions league",
+        "Times que mais empataram jogos na champions",
+        "Times que mais empataram partidas na champions"
+      ],
+      "responses": ["\nReal Madrid: 80 empates\nBarcelona: 76 empates\nBayern de Munique: 75 empates\nJuventos: 70 empates\nManchester United: 69 empates\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "GolsMarcados",
+      "patterns": ["Quais times mais marcaram gols na champions league?",
+        "Quais times mais marcaram gols na champions league?",
+        "Quais times que possui mais gols na champions league?",
+        "Times com mais gols na champions league",
+        "Times que mais marcaram gols na champions",
+        "Times que mais fizeram gols na champions"
+      ],
+      "responses": ["\nReal Madrid: 1036 gols\nBayern de Munique: 800 gols\nBarcelona: 667 gols\nManchester United: 533 gols\nJuventos: 479 gols\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "GolsSofridos",
+      "patterns": ["Quais times mais sofreram gols na champions league?",
+        "Quais times possui mais gols sofridos na champions league?",
+        "Possui mais gols sofridos na champions league",
+        "Times com mais gols sofridos na champions league",
+        "Times que mais sofreram gols na champions",
+        "Times que mais levaram gols na champions league"
+      ],
+      "responses": ["\nReal Madrid: 514 gols sofridos\nBayern de Munique: 369 gols sofridos\nBarcelona: 343 gols sofridos\nBenfica: 328 gols sofridos\nAnderlecht: 320 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "Vermelho",
+      "patterns": ["Quais times mais tomaram cartoes vermelhos na champions league?",
+        "Quais times tomaram mais cartoes vermelhos na champions league?",
+        "Quais times possui mais cartoes vermelhos na champions league?",
+        "Possui mais cartoes vermelhos na champions league",
+        "Times com mais cartoes vermelhos na champions league",
+        "Times que mais tomaram cartoes vermelhos na champions",
+        "Times que tomaram mais cartoes vermelhos na champions league"
+      ],
+      "responses": ["\nJuventos: 28 cartoes vermelhos\nPorto: 24 cartoes vermelhos\nReal Madrid: 24 cartoes vermelhos\nInter: 23 cartoes vermelhos\nBayern de Munique: 23 cartoes vermelhos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "ArtilheiroJ",
+      "patterns": ["Quais sao os artilheiros da champions league?",
+        "Quais jogadores mais marcaram gols na champions league?",
+        "Quais jogadores mais fizeram gols na champions league?",
+        "Maiores artilheiros da champions league",
+        "Quais sao os artilheiros da historia champions league?",
+        "Quais jogadores mais marcaram gols na historia da champions league?",
+        "Quais jogadores mais fizeram gols na historia da champions league?",
+        "Maiores artilheiros da historia da champions league"
+      ],
+      "responses": ["\nCristiano Ronaldo: 141 gols\nLionel Messi: 129 gols\nLewandowski: 91 gols\nBenzema: 86 gols\nRaul Gonzalez: 71 gols\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "PartidasJ",
+      "patterns": ["Quais sao os jogadores com mais partidas na champions league?",
+        "Quais jogadores mais jogaram a champions league?",
+        "Quais jogadores possuem mais partidas na champions league?",
+        "Quais jogadores possuem mais jogadores na champions league?",
+        "Jogadores com mais partidas na champions league",
+        "Jogadores com mais jogos na champions league",
+        "Jogadores que mais jogaram jogos na champions league"
+      ],
+      "responses": ["\nCristiano Ronaldo: 187 partidas\nCasillas: 181 partidas\nLionel Messi: 161 partidas\nXavi Hernandez: 157 partidas\nGiggs: 151 partidas\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "AssistenciasJ",
+      "patterns": ["Quais sao os jogadores com mais assistencias na champions league?",
+        "Quais jogadores mais deram assistencias na champions league?",
+        "Quais jogadores possuem mais assistencias na champions league?",
+        "Jogadores com mais assistencias na champions league",
+        "Jogadores que mais serviram seu companheiros na champions league"
+      ],
+      "responses": ["\nCristiano Ronaldo: 42 assistencias\nLionel Messi: 40 assistencias\nDi Maria: 38 assistencias\nNeymar Jr.: 33 assistencias\nGiggs: 31 assistencias\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "MinutagemJ",
+      "patterns": ["Quais sao os jogadores com mais minutos jogados na champions league?",
+        "Quais jogadores com mais minutagens na champions league?",
+        "Jogadores com mais minutos jogados na champions league"
+      ],
+      "responses": ["\nCasillas: 16267 minutos\nCristiano Ronaldo: 16189 minutos\nLionel Messi: 13404 minutos\nRaul Gonzalez: 12179 minutos\nNeuer: 12120 minutos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "CartoesVJ",
+      "patterns": ["Quais sao os jogadores com mais cartoes vermelhos na champions league?",
+        "Quais jogadores que mais levaram cartoes vermelhos na champions league?",
+        "Jogadores com mais cartoes vermelhos na champions league"
+      ],
+      "responses": ["\nSergio Ramos: 4 cartoes vermelhos\nDavids: 4 cartoes vermelhos\nIbrahimovic: 4 cartoes vermelhos\nDrogba: 3 cartoes vermelhos\nMexes: 3 cartoes vermelhos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "Real Madrid",
+      "patterns": ["Qual time possui mais titulos na champions league?",
+        "Qual a estatistica do Real Madrid na Champions League?",
+        "Quantos gols o Real Madrid tem na Champions League?",
+        "Quantos gols o Real Madrid sofreu na Champions League?",
+        "Quantas partidas o Real Madrid tem na champions league?",
+        "Quantas vitorias o Real Madrid tem na champions league?",
+        "Quantas derrotas o Real Madrid tem na champions league?",
+        "Quantos jogos o Real Madrid tem na champions league?",
+        "Quantas vezes o Real Madrid participou da champions league?",
+        "Quantas vezes o Real Madrid participou da champions league?",
+        "Quantas vezes o Real Madrid participou da champions league?",
+        "Qual time participou mais vezes da champions league?",
+        "Qual time possui mais jogos na champions league?",
+        "Qual time possui mais partidas na champions league?",
+        "Qual time possui mais vitórias na champions league?",
+        "Qual time possui mais empates na champions league?",
+        "Qual time possui mais derrotas na champions league?",
+        "Qual time possui mais gols na champions league?",
+        "Qual time possui mais gols sofridos na champions league?",
+        "Qual time tem mais titulos na champions league?",
+        "Qual time participou mais vezes da champions league?",
+        "Qual time tem mais jogos na champions league?",
+        "Qual time tem mais partidas na champions league?",
+        "Qual time tem mais vitórias na champions league?",
+        "Qual time tem mais empates na champions league?",
+        "Qual time tem mais derrotas na champions league?",
+        "Qual time tem mais gols na champions league?",
+        "Qual time tem mais gols sofridos na champions league?",
+        "Real Madrid"
+      ],
+      "responses": ["\nReal Madrid: \n14 titulos\n48 participacoes\n470 jogos\n281 vitorias\n80 empates\n109 derrotas\n1036 gols marcados\n514 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "Bayern",
       "patterns": [
-        "Qual jogador com maior número de gols na carreira?",
-        "Qual jogador tem mais gols na carreira?",
-        "Quem tem mais gols, crisitano ronaldo ou lionel messi?",
-        "Quem tem mais gols na Champions League?",
-        "Quem é o maior artilheiro da Champions League?",
-        "Quem é maior artilheiro da história do real madrid?",
-        "Quem é o maior artilheiro da historia da Liga dos Campeões?",
-        "Qual jogador tem mais partidas na Liga dos Campeões?",
-        "Qual jogador possui mais jogos na Liga dos Campeões?",
-        "Qual o jogador com mais gols pela seleção?",
-        "Qual o jogador com mais gols na seleção portuguesa?",
-        "Qual o maior jogador da história de portugal?",
-        "Qual o melhor jogador da história da seleção portuguesa?"
+        "Mostre as estatisticas do Bayern de Munique",
+        "Estatisticas do Bayern na champions league",
+        "Quais sao as estatisticas do Bayern na champions League?",
+        "Qual a estatistica do Bayern de Munique na Champions League?",
+        "Quantos gols o Bayern de Munique tem na Champions League?",
+        "Quantos gols o Bayern de Munique sofreu na Champions League?",
+        "Quantas partidas o Bayern de Munique tem na champions league?",
+        "Quantas vitorias o Bayern de Munique tem na champions league?",
+        "Quantas derrotas o Bayern de Munique tem na champions league?",
+        "Quantos jogos o Bayern de Munique tem na champions league?",
+        "Quantas vezes o Bayern de Munique participou da champions league?",
+        "Quantas vezes o Bayern de Munique participou da champions league?",
+        "Quantas vezes o Bayern de Munique participou da champions league?",
+        "Mostre as estatisticas do Bayern de Munique",
+        "Qual a estatistica do Bayern de Munique na Champions League?",
+        "Estatisticas do Bayern de Munique na champions league",
+        "Quais sao as estatisticas do Bayern na champions League?",
+        "Quantos gols o Bayern tem na Champions League?",
+        "Quantos gols o Bayern sofreu na Champions League?",
+        "Quantas partidas o Bayern tem na champions league?",
+        "Quantas vitorias o Bayern tem na champions league?",
+        "Quantas derrotas o Bayern tem na champions league?",
+        "Quantos jogos o Bayern tem na champions league?",
+        "Quantas vezes o Bayern participou da champions league?",
+        "Quantas vezes o Bayern participou da champions league?",
+        "Quantas vezes o Bayern participou da champions league?",
+        "Bayern de Munique"
       ],
-      "responses": ["A Maquina - Cristiano Ronaldo", "O Robo - Cristiano Ronaldo","Cristiano Ronaldo","Papai Cris"]
+      "responses": ["\nBayern de Munique: \n6 titulos\n34 participacoes\n378 jogos\n227 vitorias\n75 empates\n76 derrotas\n800 gols marcados\n369 gols sofridos\n\nMais alguma pergunta?"]
     },
     {
-      "tag": "Neymar",
-      "patterns": ["Quem é seu jogador favorito?",
-        "Melhor jogador em atividade no Brasil?",
-        "Amigo de messi",
-        "Neymar Jr.",
-        "Neymar",
-        "O que acha do Neymar Jr.?",
-        "Gosta do Neymar?",
+      "tag": "Barcelona",
+      "patterns": [
+        "Mostre as estatisticas do Barcelona",
+        "Estatisticas do Barcelona na champions league",
+        "Quais sao as estatisticas do Barcelona na champions League?",
+        "Qual a estatistica do Barcelona na Champions League?",
+        "Quantos gols o Barcelona tem na Champions League?",
+        "Quantos gols o Barcelona sofreu na Champions League?",
+        "Quantas partidas o Barcelona tem na champions league?",
+        "Quantas vitorias o Barcelona tem na champions league?",
+        "Quantas derrotas o Barcelona tem na champions league?",
+        "Quantos jogos o Barcelona tem na champions league?",
+        "Quantas vezes o Barcelona participou da champions league?",
+        "Quantas vezes o Barcelona participou da champions league?",
+        "Quantas vezes o Barcelona participou da champions league?",
+        "Barcelona"
       ],
-      "responses": ["Neymar...ele ", "O E.T - Lionel Messi","Lionel Messi","O Melhor de todos os tempos...Lionel Messi"]
+      "responses": ["\nBarcelona: \n5 titulos\n30 participacoes\n339 jogos\n197 vitorias\n76 empates\n66 derrotas\n667 gols marcados\n343 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "Inter",
+      "patterns": [
+        "Mostre as estatisticas do Inter",
+        "Estatisticas do Inter na champions league",
+        "Quais sao as estatisticas do Inter na champions League?",
+        "Qual a estatistica do Inter na Champions League?",
+        "Quantos gols o Inter tem na Champions League?",
+        "Quantos gols o Inter sofreu na Champions League?",
+        "Quantas partidas o Inter tem na champions league?",
+        "Quantas vitorias o Inter tem na champions league?",
+        "Quantas derrotas o Inter tem na champions league?",
+        "Quantos jogos o Inter tem na champions league?",
+        "Quantas vezes o Inter participou da champions league?",
+        "Quantas vezes o Inter participou da champions league?",
+        "Quantas vezes o Inter participou da champions league?",
+        "Inter"
+      ],
+      "responses": ["\nInter: \n3 titulos\n20 participacoes\n198 jogos\n94 vitorias\n52 empates\n52 derrotas\n281 gols marcados\n198 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "Liverpool",
+      "patterns": [
+        "Mostre as estatisticas do Liverpool",
+        "Estatisticas do Barcelona na champions league",
+        "Quais sao as estatisticas do Barcelona na champions League?",
+        "Qual a estatistica do Liverpool na Champions League?",
+        "Quantos gols o Liverpool tem na Champions League?",
+        "Quantos gols o Liverpool sofreu na Champions League?",
+        "Quantas partidas o Liverpool tem na champions league?",
+        "Quantas vitorias o Liverpool tem na champions league?",
+        "Quantas derrotas o Liverpool tem na champions league?",
+        "Quantos jogos o Liverpool tem na champions league?",
+        "Quantas vezes o Liverpool participou da champions league?",
+        "Quantas vezes o Liverpool participou da champions league?",
+        "Quantas vezes o Liverpool participou da champions league?",
+        "Liverpool"
+      ],
+      "responses": ["\nLiverpool: \n6 titulos\n26 participacoes\n246 jogos\n143 vitorias\n49 empates\n54 derrotas\n470 gols marcados\n222 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "Paris",
+      "patterns": ["Mostre as estatisticas do Paris Saint-Germain",
+        "Estatisticas do Paris Saint-Germain na champions league",
+        "Quais sao as estatisticas do Paris Saint-Germain na champions League?",
+        "Qual a estatistica do Paris Saint-Germain na Champions League?",
+        "Quantos gols o Paris Saint-Germain tem na Champions League?",
+        "Quantos gols o Paris Saint-Germain sofreu na Champions League?",
+        "Quantas partidas o Paris Saint-Germain tem na champions league?",
+        "Quantas vitorias o Paris Saint-Germain tem na champions league?",
+        "Quantas derrotas o Paris Saint-Germain tem na champions league?",
+        "Quantos jogos o Paris Saint-Germain tem na champions league?",
+        "Quantas vezes o Paris Saint-Germain participou da champions league?",
+        "Quantas vezes o Paris Saint-Germain participou da champions league?",
+        "Quantas vezes o Paris Saint-Germain participou da champions league?",
+        "Paris Saint-Germain",
+        "Mostre as estatisticas do Psg",
+        "Estatisticas do Psg na champions league",
+        "Quais sao as estatisticas do Psg na champions League?",
+        "Qual a estatistica do Psg na Champions League?",
+        "Quantos gols o Psg tem na Champions League?",
+        "Quantos gols o Psg sofreu na Champions League?",
+        "Quantas partidas o Psg tem na champions league?",
+        "Quantas vitorias o Psg tem na champions league?",
+        "Quantas derrotas o Psg tem na champions league?",
+        "Quantos jogos o Psg tem na champions league?",
+        "Quantas vezes o Psg participou da champions league?",
+        "Quantas vezes o Psg participou da champions league?",
+        "Quantas vezes o Psg participou da champions league?",
+        "Psg"
+      ],
+      "responses": ["\nParis Saint-Germain (PSG): \nNão possui titulos\n14 participacoes\n141 jogos\n77 vitorias\n27 empates\n37 derrotas\n283 gols marcados\n163 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "ManchesterUnited",
+      "patterns": [
+        "Mostre as estatisticas do Manchester United",
+        "Estatisticas do ManchesterUnited na champions league",
+        "Quais sao as estatisticas do ManchesterUnited na champions League?",
+        "Qual a estatistica do Manchester United na Champions League?",
+        "Quantos gols o Manchester United tem na Champions League?",
+        "Quantos gols o Manchester United sofreu na Champions League?",
+        "Quantas partidas o Manchester United tem na champions league?",
+        "Quantas vitorias o Manchester United tem na champions league?",
+        "Quantas derrotas o Manchester United tem na champions league?",
+        "Quantos jogos o Manchester United tem na champions league?",
+        "Quantas vezes o Manchester United participou da champions league?",
+        "Quantas vezes o Manchester United participou da champions league?",
+        "Quantas vezes o Manchester United participou da champions league?",
+        "Manchester United"
+      ],
+      "responses": ["\nManchester United: \n3 titulos\n28 participacoes\n293 jogos\n160 vitorias\n69 empates\n64 derrotas\n533 gols marcados\n284 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "Milan",
+      "patterns": [
+        "Mostre as estatisticas do Milan",
+        "Estatisticas do Milan na champions league",
+        "Quais sao as estatisticas do Milan na champions League?",
+        "Qual a estatistica do Milan na Champions League?",
+        "Quantos gols o Milan tem na Champions League?",
+        "Quantos gols o Milan sofreu na Champions League?",
+        "Quantas partidas o Milan tem na champions league?",
+        "Quantas vitorias o Milan tem na champions league?",
+        "Quantas derrotas o Milan tem na champions league?",
+        "Quantos jogos o Milan tem na champions league?",
+        "Quantas vezes o Milan participou da champions league?",
+        "Quantas vezes o Milan participou da champions league?",
+        "Quantas vezes o Milan participou da champions league?",
+        "Milan"
+      ],
+      "responses": ["\nMilan: \n7 titulos\n25 participacoes\n261 jogos\n129 vitorias\n66 empates\n66 derrotas\n432 gols marcados\n247 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "Ajax",
+      "patterns": [
+        "Mostre as estatisticas do Ajax",
+        "Estatisticas do Ajax na champions league",
+        "Quais sao as estatisticas do Ajax na champions League?",
+        "Qual a estatistica do Ajax na Champions League?",
+        "Quantos gols o Ajax tem na Champions League?",
+        "Quantos gols o Ajax sofreu na Champions League?",
+        "Quantas partidas o Ajax tem na champions league?",
+        "Quantas vitorias o Ajax tem na champions league?",
+        "Quantas derrotas o Ajax tem na champions league?",
+        "Quantos jogos o Ajax tem na champions league?",
+        "Quantas vezes o Ajax participou da champions league?",
+        "Quantas vezes o Ajax participou da champions league?",
+        "Quantas vezes o Ajax participou da champions league?",
+        "Ajax"
+      ],
+      "responses": ["\nAjax: \n7 titulos\n39 participacoes\n247 jogos\n112 vitorias\n64 empates\n71 derrotas\n396 gols marcados\n282 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "Chelsea",
+      "patterns": [
+        "Mostre as estatisticas do Chelsea",
+        "Estatisticas do Chelsea na champions league",
+        "Quais sao as estatisticas do Chelsea na champions League?",
+        "Qual a estatistica do Chelsea na Champions League?",
+        "Quantos gols o Chelsea tem na Champions League?",
+        "Quantos gols o Chelsea sofreu na Champions League?",
+        "Quantas partidas o Chelsea tem na champions league?",
+        "Quantas vitorias o Chelsea tem na champions league?",
+        "Quantas derrotas o Chelsea tem na champions league?",
+        "Quantos jogos o Chelsea tem na champions league?",
+        "Quantas vezes o Chelsea participou da champions league?",
+        "Quantas vezes o Chelsea participou da champions league?",
+        "Quantas vezes o Chelsea participou da champions league?",
+        "Chelsea"
+      ],
+      "responses": ["\nChelsea: \n2 titulos\n17 participacoes\n197 jogos\n103 vitorias\n53 empates\n41 derrotas\n340 gols marcados\n176 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "BorussiaDortmund",
+      "patterns": [
+        "Mostre as estatisticas do Borussia",
+        "Estatisticas do Borussia na champions league",
+        "Quais sao as estatisticas do Borussia na champions League?",
+        "Qual a estatistica do Borussia na Champions League?",
+        "Quantos gols o Borussia tem na Champions League?",
+        "Quantos gols o Borussia sofreu na Champions League?",
+        "Quantas partidas o Borussia tem na champions league?",
+        "Quantas vitorias o Borussia tem na champions league?",
+        "Quantas derrotas o Borussia tem na champions league?",
+        "Quantos jogos o Borussia tem na champions league?",
+        "Quantas vezes o Borussia participou da champions league?",
+        "Quantas vezes o Borussia participou da champions league?",
+        "Quantas vezes o Borussia participou da champions league?",
+        "Mostre as estatisticas do Borussia Dortmund",
+        "Estatisticas do Borussia Dortmund na champions league",
+        "Quais sao as estatisticas do Borussia Dortmund na champions League?",
+        "Qual a estatistica do Borussia Dortmund na Champions League?",
+        "Quantos gols o Borussia Dortmund tem na Champions League?",
+        "Quantos gols o Borussia Dortmund sofreu na Champions League?",
+        "Quantas partidas o Borussia Dortmund tem na champions league?",
+        "Quantas vitorias o Borussia Dortmund tem na champions league?",
+        "Quantas derrotas o Borussia Dortmund tem na champions league?",
+        "Quantos jogos o Borussia Dortmund tem na champions league?",
+        "Quantas vezes o Borussia Dortmund participou da champions league?",
+        "Quantas vezes o Borussia Dortmund participou da champions league?",
+        "Quantas vezes o Borussia Dortmund participou da champions league?",
+        "Borussia Dortmund",
+        "Borussia",
+        "Dortmund"
+      ],
+      "responses": ["\nBorussia Dortmund: \n1 titulo\n20 participacoes\n168 jogos\n80 vitorias\n33 empates\n55 derrotas\n286 gols marcados\n212 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "ManCity",
+      "patterns": [
+        "Mostre as estatisticas do Manchester City",
+        "Estatisticas do Manchester City na champions league",
+        "Quais sao as estatisticas do Manchester City na champions League?",
+        "Qual a estatistica do Manchester City na Champions League?",
+        "Quantos gols o Manchester City tem na Champions League?",
+        "Quantos gols o Manchester City sofreu na Champions League?",
+        "Quantas partidas o Manchester City tem na champions league?",
+        "Quantas vitorias o Manchester City tem na champions league?",
+        "Quantas derrotas o Manchester City tem na champions league?",
+        "Quantos jogos o Manchester City tem na champions league?",
+        "Quantas vezes o Manchester City participou da champions league?",
+        "Quantas vezes o Manchester City participou da champions league?",
+        "Quantas vezes o Manchester City participou da champions league?",
+        "Mostre as estatisticas do City",
+        "Qual a estatistica do City na Champions League?",
+        "Estatisticas do City na champions league",
+        "Quais sao as estatisticas do City na champions League?",
+        "Quantos gols o City tem na Champions League?",
+        "Quantos gols o City sofreu na Champions League?",
+        "Quantas partidas o City tem na champions league?",
+        "Quantas vitorias o City tem na champions league?",
+        "Quantas derrotas o City tem na champions league?",
+        "Quantos jogos o City tem na champions league?",
+        "Quantas vezes o City participou da champions league?",
+        "Quantas vezes o City participou da champions league?",
+        "Quantas vezes o City participou da champions league?",
+        "Manchester City",
+        "City"
+      ],
+      "responses": ["\nManchester City: \n1 titulo\n14 participacoes\n112 jogos\n62 vitorias\n21 empates\n55 derrotas\n286 gols marcados\n212 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "Juventus",
+      "patterns": [
+        "Mostre as estatisticas do Juventus",
+        "Estatisticas do Juventos na champions league",
+        "Quais sao as estatisticas do Juventos na champions League?",
+        "Qual a estatistica do Juventus na Champions League?",
+        "Quantos gols o Juventus tem na Champions League?",
+        "Quantos gols o Juventus sofreu na Champions League?",
+        "Quantas partidas o Juventus tem na champions league?",
+        "Quantas vitorias o Juventus tem na champions league?",
+        "Quantas derrotas o Juventus tem na champions league?",
+        "Quantos jogos o Juventus tem na champions league?",
+        "Quantas vezes o Juventus participou da champions league?",
+        "Quantas vezes o Juventus participou da champions league?",
+        "Quantas vezes o Juventus participou da champions league?",
+        "Juventus"
+      ],
+      "responses": ["\nJuventus: \n2 titulos\n36 participacoes\n301 jogos\n153 vitorias\n70 empates\n29 derrotas\n227 gols marcados\n128 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "Benfica",
+      "patterns": [
+        "Mostre as estatisticas do Benfica",
+        "Estatisticas do Benfica na champions league",
+        "Quais sao as estatisticas do Benfica na champions League?",
+        "Qual a estatistica do Benfica na Champions League?",
+        "Quantos gols o Benfica tem na Champions League?",
+        "Quantos gols o Benfica sofreu na Champions League?",
+        "Quantas partidas o Benfica tem na champions league?",
+        "Quantas vitorias o Benfica tem na champions league?",
+        "Quantas derrotas o Benfica tem na champions league?",
+        "Quantos jogos o Benfica tem na champions league?",
+        "Quantas vezes o Benfica participou da champions league?",
+        "Quantas vezes o Benfica participou da champions league?",
+        "Quantas vezes o Benfica participou da champions league?",
+        "Benfica"
+      ],
+      "responses": ["\nBenfica: \n2 titulos\n42 participacoes\n283 jogos\n128 vitorias\n66 empates\n89 derrotas\n465 gols marcados\n328 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "Porto",
+      "patterns": [
+        "Mostre as estatisticas do Porto",
+        "Estatisticas do Porto na champions league",
+        "Quais sao as estatisticas do Porto na champions League?",
+        "Qual a estatistica do Porto na Champions League?",
+        "Quantos gols o Porto tem na Champions League?",
+        "Quantos gols o Porto sofreu na Champions League?",
+        "Quantas partidas o Porto tem na champions league?",
+        "Quantas vitorias o Porto tem na champions league?",
+        "Quantas derrotas o Porto tem na champions league?",
+        "Quantos jogos o Porto tem na champions league?",
+        "Quantas vezes o Porto participou da champions league?",
+        "Quantas vezes o Porto participou da champions league?",
+        "Quantas vezes o Porto participou da champions league?",
+        "Porto"
+      ],
+      "responses": ["\nPorto: \n2 Titulos\n37 participacoes\n267 jogos\n121 vitorias\n60 empates\n86 derrotas\n395 gols marcados\n303 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "Arsenal",
+      "patterns": [
+        "Mostre as estatisticas do Arsenal",
+        "Estatisticas do Arsenal na champions league",
+        "Quais sao as estatisticas do Arsenal na champions League?",
+        "Qual a estatistica do Arsenal na Champions League?",
+        "Quantos gols o Arsenal tem na Champions League?",
+        "Quantos gols o Arsenal sofreu na Champions League?",
+        "Quantas partidas o Arsenal tem na champions league?",
+        "Quantas vitorias o Arsenal tem na champions league?",
+        "Quantas derrotas o Arsenal tem na champions league?",
+        "Quantos jogos o Arsenal tem na champions league?",
+        "Quantas vezes o Arsenal participou da champions league?",
+        "Quantas vezes o Arsenal participou da champions league?",
+        "Quantas vezes o Arsenal participou da champions league?",
+        "Arsenal"
+      ],
+      "responses": ["\nArsenal:\nNenhum titulo\n21 participacoes\n201 jogos\n101 vitorias\n43 empates\n57 derrotas\n332 gols marcados\n218 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "AtleticoMadrid",
+      "patterns": [
+        "Mostre as estatisticas do Atletico de Madrid",
+        "Qual a estatistica do Atletico de Madrid na Champions League?",
+        "Quantos gols o Atletico de Madrid tem na Champions League?",
+        "Quantos gols o Atletico de Madrid sofreu na Champions League?",
+        "Quantas partidas o Atletico de Madrid tem na champions league?",
+        "Quantas vitorias o Atletico de Madrid tem na champions league?",
+        "Quantas derrotas o Atletico de Madrid tem na champions league?",
+        "Quantos jogos o Atletico de Madrid tem na champions league?",
+        "Quantas vezes o Atletico de Madrid participou da champions league?",
+        "Quantas vezes o Atletico de Madrid participou da champions league?",
+        "Quantas vezes o Atletico de Madrid participou da champions league?",
+        "Atletico de Madrid"
+      ],
+      "responses": ["\nAtletico de Madrid:\nNenhum titulo\n18 participacoes\n160 jogos\n76 vitorias\n42 empates\n42 derrotas\n226 gols marcados\n152 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "Tottenham Hotspur",
+      "patterns": [
+        "Mostre as estatisticas do Tottenham Hotspur",
+        "Estatisticas do Tottenham Hotspur na champions league",
+        "Quais sao as estatisticas do Tottenham Hotspur na champions League?",
+        "Qual a estatistica do Tottenham Hotspur na Champions League?",
+        "Quantos gols o Tottenham Hotspur tem na Champions League?",
+        "Quantos gols o Tottenham Hotspur sofreu na Champions League?",
+        "Quantas partidas o Tottenham Hotspur tem na champions league?",
+        "Quantas vitorias o Tottenham Hotspur tem na champions league?",
+        "Quantas derrotas o Tottenham Hotspur tem na champions league?",
+        "Quantos jogos o Tottenham Hotspur tem na champions league?",
+        "Quantas vezes o Tottenham Hotspur participou da champions league?",
+        "Quantas vezes o Tottenham Hotspur participou da champions league?",
+        "Quantas vezes o Tottenham Hotspur participou da champions league?",
+        "Tottenham Hotspur",
+        "Mostre as estatisticas do Tottenham",
+        "Estatisticas do Tottenham na champions league",
+        "Quais sao as estatisticas do Tottenham na champions League?",
+        "Qual a estatistica do Tottenham na Champions League?",
+        "Quantos gols o Tottenham tem na Champions League?",
+        "Quantos gols o Tottenham sofreu na Champions League?",
+        "Quantas partidas o Tottenham tem na champions league?",
+        "Quantas vitorias o Tottenham tem na champions league?",
+        "Quantas derrotas o Tottenham tem na champions league?",
+        "Quantos jogos o Tottenham tem na champions league?",
+        "Quantas vezes o Tottenham participou da champions league?",
+        "Quantas vezes o Tottenham participou da champions league?",
+        "Quantas vezes o Tottenham participou da champions league?",
+        "Tottenham"
+      ],
+      "responses": ["\nTottenham Hotspur:\nNenhum titulo\n7 participacoes\n61 jogos\n28 vitorias\n12 empates\n21 derrotas\n116 gols marcados\n89 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "Club Brugge",
+      "patterns": [
+        "Mostre as estatisticas do Club Brugge",
+        "Estatisticas do Club Brugge na champions league",
+        "Quais sao as estatisticas do Club Brugge na champions League?",
+        "Qual a estatistica do Club Brugge na Champions League?",
+        "Quantos gols o Club Brugge tem na Champions League?",
+        "Quantos gols o Club Brugge sofreu na Champions League?",
+        "Quantas partidas o Club Brugge tem na champions league?",
+        "Quantas vitorias o Club Brugge tem na champions league?",
+        "Quantas derrotas o Club Brugge tem na champions league?",
+        "Quantos jogos o Club Brugge tem na champions league?",
+        "Quantas vezes o Club Brugge participou da champions league?",
+        "Quantas vezes o Club Brugge participou da champions league?",
+        "Quantas vezes o Club Brugge participou da champions league?",
+        "Club Brugge",
+        "Mostre as estatisticas do Brugge",
+        "Estatisticas do Brugge na champions league",
+        "Quais sao as estatisticas do Brugge na champions League?",
+        "Qual a estatistica do Brugge na Champions League?",
+        "Quantos gols o Brugge tem na Champions League?",
+        "Quantos gols o Brugge sofreu na Champions League?",
+        "Quantas partidas o Brugge tem na champions league?",
+        "Quantas vitorias o Brugge tem na champions league?",
+        "Quantas derrotas o Brugge tem na champions league?",
+        "Quantos jogos o Brugge tem na champions league?",
+        "Quantas vezes o Brugge participou da champions league?",
+        "Quantas vezes o Brugge participou da champions league?",
+        "Quantas vezes o Brugge participou da champions league?",
+        "Brugge"
+      ],
+      "responses": ["\nClub Brugge:\nNenhum titulo\n23 participacoes\n125 jogos\n43 vitorias\n30 empates\n52 derrotas\n156 gols marcados\n179 gols sofridos\n\nMais alguma pergunta?"]
+    },
+    {
+      "tag": "ForaContexto",
+      "patterns": [
+        "Mostre as estatisticas do corinthians",
+        "Como esta o clima na minha cidade ?",
+        "Que horas sao ?",
+        "Qual sua cor favorita ?",
+        "Qual nome do seu professor favorito?",
+        "Onde voce mora?",
+        "Onde voce estuda ?",
+        "Qual time voce torce?",
+        "Qual o meu nome ?",
+        "Que dia e hoje ?",
+        "Qual a minha idade ?"
+      ],
+      "responses": ["Infelizmente ainda nao tenho essas informacoes em meus bancos de dados!","Nao tenho ideia do que vc esta falando !","Esse tipo de informacao nao condiz com o meu contexto atual"]
+    },
+    {
+      "tag": "kkk",
+      "patterns": [
+        "Portella ?"
+      ],
+      "responses": ["veio kkkkkkk"]
     }
   ]
 }
+

@@ -13,6 +13,9 @@ import pickle
 from dotenv import load_dotenv
 from discord.ext import commands
 from chatterbot import ChatBot
+import logging
+logger = logging.getLogger()
+logger.setLevel(logging.CRITICAL)
 
 chatbot = ChatBot(
     'Ajudante do Squad',
@@ -85,11 +88,9 @@ net = tflearn.regression(net)
 
 model = tflearn.DNN(net)
 
-try:
-    model.load("model.tflearn")
-except:
-    model.fit(treinando, saida, n_epoch=1000, batch_size=8, show_metric=True)
-    model.save("model.tflearn")
+
+model.fit(treinando, saida, n_epoch=1000, batch_size=8, show_metric=True)
+model.save("model.tflearn")
 
 
 def saco_de_palavras(s, palavras):
@@ -110,7 +111,7 @@ intents = discord.Intents.default()
 client = commands.Bot(command_prefix='', intents=intents)
 
 load_dotenv()
-TOKEN = os.getenv('TOKEN')
+TOKEN = os.getenv('TOKEN')  # Insira o token no .env
 
 
 @client.event
@@ -120,6 +121,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+
     global responses
     if message.author == client.user:
         return
@@ -137,7 +139,7 @@ async def on_message(message):
                 responses = tg['responses']
         resposta = random.choice(responses)
     else:
-        resposta = "Precisa de mais alguma coisa?"
+        resposta = "Nao entendi! Melhore a pergunta ou realize outra!"
 
     await message.channel.send(resposta)
 
@@ -153,3 +155,6 @@ async def on_member_join(self, member):
 
 
 client.run(TOKEN)
+
+
+
